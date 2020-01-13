@@ -8,7 +8,7 @@ public class Main {
         Subject machineLearning = new Subject("Machine Learning");
         Subject dataBases = new Subject("Data Bases");
 
-        Student john = new Student("John", "Snow", new double[] {4, 5, 10, 7});
+        Student john = new Student("John", "Snow", new double[] {4, 5, 11, 7});
         Student daenerys = new Student("Daenerys", "Targaryen", new double[]{2, 4, 7, 9});
         Student arya = new Student("Arya", "Stark", new double[]{7, 8, 5});
         Student tyrion = new Student("Tyron", "Lannister", new double[]{8, 9, 6});

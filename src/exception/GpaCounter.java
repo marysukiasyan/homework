@@ -15,7 +15,7 @@ public class GpaCounter {
             try {
                 for (int i = 0; i < grades.length; i++) {
                     if (grades[i] < 0 || grades[i] > 10) {
-                        throw new Exception("Grades aren't right");
+                        throw new Exception(student.getName() + "'s grades aren't right");
                     }
                 }
                 for (int i = 0; i < grades.length; i++) {
