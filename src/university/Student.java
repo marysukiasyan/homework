@@ -7,44 +7,70 @@ public class Student {
     private double[] grades;
     private Subject[] subjects;
 
-    public Subject[] getSubjects() {
-        return subjects;
-    }
-
-    public void setSubjects(Subject[] subjects) {
-        this.subjects = subjects;
+    private Student(StudentBuilder builder) {
+        name = builder.name;
+        surname = builder.surname;
+        subjects = builder.subjects;
+        grades = builder.grades;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-
     public String getSurname() {
         return surname;
-    }
-
-
-    public Student(String name, String surname, double[] grades, Subject[] subjects) {
-        this.name = name;
-        this.surname = surname;
-        this.grades = grades;
-        this.subjects = subjects;
-    }
-
-    public void setGrades(double[] grades) {
-        this.grades = grades;
     }
 
     public double[] getGrades() {
         return grades;
     }
+
+    public Subject[] getSubjects() {
+        return subjects;
+    }
+
+    public static class StudentBuilder {
+            private String name;
+            private String surname;
+            private double[] grades;
+            private Subject[] subjects;
+
+            public StudentBuilder(String name, String surname){
+                this.name = name;
+                this.surname = surname;
+            }
+
+            public StudentBuilder grades(double[] grades) {
+                this.grades = grades;
+                return this;
+            }
+
+            public StudentBuilder subjects(Subject[] subjects) {
+                this.subjects = subjects;
+                return this;
+            }
+
+            public Student build(){
+                Student student = new Student(this);
+                return student;
+            }
+
+        public Subject[] getSubjects() {
+            return subjects;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public double[] getGrades() {
+            return grades;
+        }
+
+        public String getSurname() {
+            return surname;
+        }
+    }
+
 }
