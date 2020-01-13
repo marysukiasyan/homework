@@ -1,4 +1,4 @@
-package exception;
+package university;
 
 public class Faculty {
     private String facultyName;
