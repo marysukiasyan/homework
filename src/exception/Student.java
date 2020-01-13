@@ -5,6 +5,15 @@ public class Student {
     private String name;
     private String surname;
     private double[] grades;
+    private Subject[] subjects;
+
+    public Subject[] getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(Subject[] subjects) {
+        this.subjects = subjects;
+    }
 
     public String getName() {
         return name;
@@ -24,10 +33,11 @@ public class Student {
     }
 
 
-    public Student(String name, String surname, double[] grades) {
+    public Student(String name, String surname, double[] grades, Subject[] subjects) {
         this.name = name;
         this.surname = surname;
         this.grades = grades;
+        this.subjects = subjects;
     }
 
     public void setGrades(double[] grades) {

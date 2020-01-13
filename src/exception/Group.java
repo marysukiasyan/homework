@@ -2,7 +2,6 @@ package exception;
 
 public class Group {
     private int groupNumber;
-    private Subject[] subjects;
     private Student[] groupStudents;
 
     public int getGroupNumber() {
@@ -13,9 +12,8 @@ public class Group {
         this.groupNumber = groupNumber;
     }
 
-    public Group(int groupNumber, Subject[] subjects, Student[] groupStudents) {
+    public Group(int groupNumber, Student[] groupStudents) {
         this.groupNumber = groupNumber;
-        this.subjects = subjects;
         this.groupStudents = groupStudents;
     }
 
@@ -28,12 +26,4 @@ public class Group {
     }
 
 
-    public Subject[] getSubjects() {
-        return subjects;
-    }
-
-
-    public void setSubjects(Subject[] subjects) {
-        this.subjects = subjects;
-    }
 }
