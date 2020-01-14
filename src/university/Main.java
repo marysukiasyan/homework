@@ -8,29 +8,29 @@ public class Main {
         Subject machineLearning = new Subject("Machine Learning");
         Subject dataBases = new Subject("Data Bases");
 
-        Student.StudentBuilder john = new Student.StudentBuilder("John", "Snow")
+        Student john = new Student.StudentBuilder("John", "Snow")
                 .grades(new double[]{4, 5, 10, 7})
-                .subjects(new Subject[]{mathLogic, operatingSystems, machineLearning, dataBases});
-        Student John = john.build();
+                .subjects(new Subject[]{mathLogic, operatingSystems, machineLearning, dataBases})
+                .build();
 
-        Student.StudentBuilder daenerys = new Student.StudentBuilder("Daenerys", "Targaryen")
+        Student daenerys = new Student.StudentBuilder("Daenerys", "Targaryen")
                 .grades(new double[]{2, 4, 7})
-                .subjects(new Subject[]{mathLogic, machineLearning, dataBases});
-        Student Daenerys = daenerys.build();
+                .subjects(new Subject[]{mathLogic, machineLearning, dataBases})
+                .build();
 
-        Student.StudentBuilder arya = new Student.StudentBuilder("Arya", "Stark")
+        Student arya = new Student.StudentBuilder("Arya", "Stark")
                 .grades(new double[]{7, 8})
-                .subjects(new Subject[]{operatingSystems, dataBases});
-        Student Arya = arya.build();
+                .subjects(new Subject[]{operatingSystems, dataBases})
+                .build();
 
-        Student.StudentBuilder tyrion = new Student.StudentBuilder("Tyrion", "Lannister")
+        Student tyrion = new Student.StudentBuilder("Tyrion", "Lannister")
                 .grades(new double[]{8, 9})
-                .subjects(new Subject[]{machineLearning, dataBases});
-        Student Tyrion = tyrion.build();
+                .subjects(new Subject[]{machineLearning, dataBases})
+                .build();
 
 
-        Group groupOne = new Group(1, new Student[]{John, Daenerys});
-        Group groupTwo = new Group(2, new Student[]{Arya, Tyrion});
+        Group groupOne = new Group(1, new Student[]{john, daenerys});
+        Group groupTwo = new Group(2, new Student[]{arya, tyrion});
 
         Faculty computerScience = new Faculty("Computer Science", new Group[]{groupOne});
         Faculty mathematics = new Faculty("Mathematics", new Group[]{groupTwo});

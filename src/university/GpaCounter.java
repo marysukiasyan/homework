@@ -2,7 +2,7 @@ package university;
 
 public class GpaCounter {
 
-    public static void studentGpa(Student.StudentBuilder student) {
+    public static void studentGpa(Student student) {
         double sumOfGrades = 0;
         int subjectNumbers = 0;
         double finalResult = 0;
