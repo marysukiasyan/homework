@@ -4,6 +4,7 @@ public class Group {
     private int groupNumber;
     private Student[] groupStudents;
 
+
     public int getGroupNumber() {
         return groupNumber;
     }

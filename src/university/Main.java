@@ -1,7 +1,10 @@
 package university;
 
+import university.exception.StudentsMissingException;
+import university.exception.WrongGradesException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws StudentsMissingException, WrongGradesException {
 
         Subject mathLogic = new Subject("Math Logic");
         Subject operatingSystems = new Subject("Operating Systems");
@@ -10,17 +13,17 @@ public class Main {
 
         Student john = new Student.StudentBuilder("John", "Snow")
                 .grades(new double[]{4, 5, 10, 7})
-                .subjects(new Subject[]{mathLogic, operatingSystems, machineLearning, dataBases})
+                .subjects(new Subject[]{})
                 .build();
 
         Student daenerys = new Student.StudentBuilder("Daenerys", "Targaryen")
-                .grades(new double[]{2, 4, 7})
+                .grades(new double[]{3, 5, 11})
                 .subjects(new Subject[]{mathLogic, machineLearning, dataBases})
                 .build();
 
         Student arya = new Student.StudentBuilder("Arya", "Stark")
                 .grades(new double[]{7, 8})
-                .subjects(new Subject[]{operatingSystems, dataBases})
+                .subjects(new Subject[]{mathLogic, machineLearning})
                 .build();
 
         Student tyrion = new Student.StudentBuilder("Tyrion", "Lannister")
@@ -37,15 +40,13 @@ public class Main {
 
         University ysu = new University("YSU", new Faculty[]{computerScience, mathematics});
 
-        GpaCounter.studentGpa(daenerys);
-        GpaCounter.studentGpa(john);
+        TryCatchMethods.TryCatchForGradesOrSubjects(john);
+        TryCatchMethods.TryCatchForGradesOrSubjects(daenerys);
 
-        GpaCounter.subjectGpaForEachGroup(groupOne, machineLearning);
+        TryCatchMethods.TryCatchForGroupStudents(groupOne, machineLearning);
 
-        GpaCounter.subjectGpaForEachFaculty(computerScience, machineLearning);
+        TryCatchMethods.TryCatchForFacultyGroups(computerScience, machineLearning);
 
         GpaCounter.subjectGpaForUniversity(ysu, dataBases);
-
-
     }
 }

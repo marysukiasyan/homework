@@ -1,5 +1,8 @@
 package university;
 
+import university.exception.SubjectsMissingException;
+import university.exception.WrongGradesException;
+
 public class Student {
 
     private String name;
@@ -13,6 +16,7 @@ public class Student {
         subjects = builder.subjects;
         grades = builder.grades;
     }
+
 
     public String getName() {
         return name;
