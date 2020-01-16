@@ -27,7 +27,6 @@ public class GpaCounter {
         }
         }
 
-
     public static void subjectGpaForEachGroup(Group group, Subject subject) {
         int currentSubjectIndex = 0;
         int sumOfGrades = 0;
@@ -124,5 +123,4 @@ public class GpaCounter {
             System.out.println(subject.getSubjectName() + " subject's GPA in " + university.getUniName() +
                     " university is " + finalResult);
     }
-
 }

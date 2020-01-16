@@ -17,7 +17,7 @@ public class Main {
                 .build();
 
         Student daenerys = new Student.StudentBuilder("Daenerys", "Targaryen")
-                .grades(new double[]{3, 5, 11})
+                .grades(new double[]{3, 5, 10})
                 .subjects(new Subject[]{mathLogic, machineLearning, dataBases})
                 .build();
 
@@ -47,6 +47,6 @@ public class Main {
 
         TryCatchMethods.TryCatchForFacultyGroups(computerScience, machineLearning);
 
-        GpaCounter.subjectGpaForUniversity(ysu, dataBases);
+        TryCatchMethods.TryCatchForUniversityFaculties(ysu, dataBases);
     }
 }

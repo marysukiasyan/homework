@@ -1,9 +1,6 @@
 package university;
 
-import university.exception.GroupsMissingException;
-import university.exception.StudentsMissingException;
-import university.exception.SubjectsMissingException;
-import university.exception.WrongGradesException;
+import university.exception.*;
 
 public class TryCatchMethods {
     public static void TryCatchForGradesOrSubjects(Student student){
@@ -29,6 +26,14 @@ public class TryCatchMethods {
         try{
             GpaCounter.subjectGpaForEachFaculty(faculty, subject);
         } catch (GroupsMissingException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void TryCatchForUniversityFaculties(University university, Subject subject){
+        try{
+            GpaCounter.subjectGpaForUniversity(university, subject);
+        } catch (FacultiesMissingException e){
             e.printStackTrace();
         }
     }
