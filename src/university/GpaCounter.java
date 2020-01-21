@@ -10,7 +10,7 @@ public class GpaCounter {
         double finalResult = 0;
         double[] grades = student.getGrades();
 
-        if (student.getSubjects().length == 0 || student.getSubjects() == null) {
+        if (student.getSubjects() == null || student.getSubjects().length == 0) {
             System.out.println(student.getName() + " doesn't have any subject");
             throw new SubjectsMissingException("Student doesn't have subjects");
         } else if (student.getSubjects().length != 0 && student.getSubjects() != null) {
@@ -34,7 +34,7 @@ public class GpaCounter {
         double finalResult;
         Student[] studentsOfCurrentGroup = group.getGroupStudents();
 
-            if (studentsOfCurrentGroup.length == 0 || studentsOfCurrentGroup == null) {
+            if (studentsOfCurrentGroup == null || studentsOfCurrentGroup.length == 0) {
                 System.out.println("Group " + group.getGroupNumber() + " doesn't have students");
                 throw new StudentsMissingException("Group doesn't have students");
             }
@@ -63,7 +63,7 @@ public class GpaCounter {
         double studentNumbers = 0;
         double finalResult;
         int index = 0;
-            if (groupsOfFaculty.length == 0 || groupsOfFaculty == null) {
+            if (groupsOfFaculty == null || groupsOfFaculty.length == 0) {
                 System.out.println(faculty.getFacultyName() + " faculty doesn't have groups");
                 throw new GroupsMissingException("Faculty doesn't have groups");
             }
@@ -95,7 +95,7 @@ public class GpaCounter {
         double finalResult;
         Faculty[] universityFaculties = university.getFaculty();
 
-            if (universityFaculties.length == 0 || universityFaculties == null) {
+            if (universityFaculties == null || universityFaculties.length == 0) {
                 System.out.println(university.getUniName() + " doesn't have faculties");
                 throw new FacultiesMissingException("University doesn't have faculties");
             }

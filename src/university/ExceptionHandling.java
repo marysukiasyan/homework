@@ -2,7 +2,7 @@ package university;
 
 import university.exception.*;
 
-public class TryCatchMethods {
+public class ExceptionHandling {
     public static void TryCatchForGradesOrSubjects(Student student){
         try{
             GpaCounter.studentGpa(student);

@@ -40,13 +40,13 @@ public class Main {
 
         University ysu = new University("YSU", new Faculty[]{computerScience, mathematics});
 
-        TryCatchMethods.TryCatchForGradesOrSubjects(john);
-        TryCatchMethods.TryCatchForGradesOrSubjects(daenerys);
+        ExceptionHandling.TryCatchForGradesOrSubjects(john);
+        ExceptionHandling.TryCatchForGradesOrSubjects(daenerys);
 
-        TryCatchMethods.TryCatchForGroupStudents(groupOne, machineLearning);
+        ExceptionHandling.TryCatchForGroupStudents(groupOne, machineLearning);
 
-        TryCatchMethods.TryCatchForFacultyGroups(computerScience, machineLearning);
+        ExceptionHandling.TryCatchForFacultyGroups(computerScience, machineLearning);
 
-        TryCatchMethods.TryCatchForUniversityFaculties(ysu, dataBases);
+        ExceptionHandling.TryCatchForUniversityFaculties(ysu, dataBases);
     }
 }
