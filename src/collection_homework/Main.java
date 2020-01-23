@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Student> students = new ArrayList();
+        ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("John", "Snow", 24));
         students.add(new Student("Ann", "Smith", 25));
 
@@ -29,7 +29,7 @@ public class Main {
             System.out.println(student);
         }
         //2
-        LinkedList<Student> studentsList = new LinkedList();
+        LinkedList<Student> studentsList = new LinkedList<>();
 
         studentsList.add(new Student("Elle", "Spinella", 23));
         studentsList.add(new Student("Berie", "Leister", 23));
@@ -48,5 +48,30 @@ public class Main {
         for(Student student: studentsList){
             System.out.println(student);
         }
+
+        //3
+        DynamicArray studentsDynamicArray = new DynamicArray();
+
+        Student poghos = new Student("Poghos", "Poghosyan", 23);
+        Student petros = new Student("Petros", "Petrosyan", 24);
+        Student martiros  = new Student("Martiros", "Martirosyan", 25);
+
+        studentsDynamicArray.add(poghos);
+        studentsDynamicArray.add(petros);
+        studentsDynamicArray.add(martiros);
+        studentsDynamicArray.add(petros);
+        studentsDynamicArray.add(martiros);
+
+        studentsDynamicArray.remove(martiros);
+        studentsDynamicArray.remove(petros);
+        studentsDynamicArray.remove(poghos);
+
+        for (int i = 0; i < studentsDynamicArray.getStudentsArray().length; i++) {
+            System.out.println(studentsDynamicArray.getStudentsArray().length);
+            System.out.println(studentsDynamicArray.getStudentsArray()[i]);
+        }
+
+        System.out.println(studentsDynamicArray.get(1));
+        System.out.println(studentsDynamicArray.size());
     }
 }
