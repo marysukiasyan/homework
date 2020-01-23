@@ -73,5 +73,19 @@ public class Main {
 
         System.out.println(studentsDynamicArray.get(1));
         System.out.println(studentsDynamicArray.size());
+
+        //4
+        System.out.println("4th task");
+
+        DoublyLinkedList linkedList = new DoublyLinkedList();
+        linkedList.push(poghos);
+        linkedList.push(petros);
+        linkedList.pop();
+        linkedList.addLast(petros);
+        linkedList.addLast(martiros);
+        linkedList.removeLast();
+        System.out.println(linkedList.size());
+
+        linkedList.print();
     }
 }
