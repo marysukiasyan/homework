@@ -28,4 +28,8 @@ public class Student {
     public int getAge() {
         return age;
     }
+
+    public void studentData(){
+        System.out.println(firstName + " " + lastName + " " + age);
+    }
 }

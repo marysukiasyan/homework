@@ -6,6 +6,14 @@ public class DoublyLinkedList {
     private Node tail;
     private int size = 0;
 
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
     class Node {
         Student student;
         Node next;
@@ -15,17 +23,6 @@ public class DoublyLinkedList {
             this.student = student;
             this.next = next;
             this.prev = prev;
-        }
-    }
-
-    public void print() {
-        Node current = head;
-        if(head == null) {
-            System.out.println("List is empty");
-        }
-        while(current != null){
-            System.out.println(current.student);
-            current = current.next;
         }
     }
 

@@ -1,10 +1,12 @@
 package collection_homework;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 
-public class Main {
+public class StudentService {
 
     public static void main(String[] args) {
 
@@ -12,22 +14,17 @@ public class Main {
         students.add(new Student("John", "Snow", 24));
         students.add(new Student("Ann", "Smith", 25));
 
-        System.out.println("Before sorting");
-        for(Student student: students){
-            System.out.println(student);
-        }
         //1
         System.out.println("FirstName sorting");
         Collections.sort(students, new FirstNameComparator());
-        for(Student student: students){
-            System.out.println(student);
-        }
+        printStudentsArrayList(students);
+
         //1
         Collections.sort(students, new AgeComparator());
         System.out.println("Age sorting");
-        for(Student student: students){
-            System.out.println(student);
-        }
+
+        printStudentsArrayList(students);
+
         //2
         LinkedList<Student> studentsList = new LinkedList<>();
 
@@ -37,19 +34,15 @@ public class Main {
         studentsList.add(new Student("Yvonne", "Williams", 25));
         studentsList.add(new Student("David", "Thares", 20));
 
-        System.out.println("Before sorting");
-        for(Student student: studentsList){
-            System.out.println(student);
-        }
-
         Collections.sort(studentsList, new LastNameComparator());
 
         System.out.println("LastName sorting");
-        for(Student student: studentsList){
-            System.out.println(student);
-        }
+        printStudentsLinkedList(studentsList);
 
         //3
+
+        System.out.println("3th task");
+
         DynamicArray studentsDynamicArray = new DynamicArray();
 
         Student poghos = new Student("Poghos", "Poghosyan", 23);
@@ -66,13 +59,7 @@ public class Main {
         studentsDynamicArray.remove(petros);
         studentsDynamicArray.remove(poghos);
 
-        for (int i = 0; i < studentsDynamicArray.getStudentsArray().length; i++) {
-            System.out.println(studentsDynamicArray.getStudentsArray().length);
-            System.out.println(studentsDynamicArray.getStudentsArray()[i]);
-        }
-
-        System.out.println(studentsDynamicArray.get(1));
-        System.out.println(studentsDynamicArray.size());
+        printStudentsDynamicArray(studentsDynamicArray);
 
         //4
         System.out.println("4th task");
@@ -84,8 +71,38 @@ public class Main {
         linkedList.addLast(petros);
         linkedList.addLast(martiros);
         linkedList.removeLast();
-        System.out.println(linkedList.size());
 
-        linkedList.print();
+        printStudentsDoublyLinkedList(linkedList);
+    }
+
+    private static void printStudentsArrayList(ArrayList<Student> students){
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()){
+            iterator.next().studentData();
+        }
+    }
+
+    private static void printStudentsLinkedList(LinkedList<Student> students){
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()){
+            iterator.next().studentData();
+        }
+    }
+
+    private static void printStudentsDynamicArray(DynamicArray students){
+        for (int i = 0; i < students.size(); i++) {
+            students.get(i).studentData();
+        }
+    }
+
+    private static void printStudentsDoublyLinkedList(DoublyLinkedList students){
+        DoublyLinkedList.Node current = students.getHead();
+        if(current == null){
+            System.out.println("List is empty");
+        }
+        while(current != null) {
+            System.out.println(current.student);
+            current = current.next;
+        }
     }
 }
