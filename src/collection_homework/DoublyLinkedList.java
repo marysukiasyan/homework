@@ -6,11 +6,11 @@ public class DoublyLinkedList {
     private Node tail;
     private int size = 0;
 
-    public Node getHead() {
+    Node getHead() {
         return head;
     }
 
-    public Node getTail() {
+     Node getTail() {
         return tail;
     }
 

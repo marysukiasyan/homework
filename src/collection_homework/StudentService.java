@@ -1,6 +1,5 @@
 package collection_homework;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -34,7 +33,7 @@ public class StudentService {
         studentsList.add(new Student("Yvonne", "Williams", 25));
         studentsList.add(new Student("David", "Thares", 20));
 
-        Collections.sort(studentsList, new LastNameComparator());
+        Collections.sort(studentsList);
 
         System.out.println("LastName sorting");
         printStudentsLinkedList(studentsList);

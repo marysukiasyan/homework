@@ -59,7 +59,7 @@ public class DynamicArray {
         studentsArray = tempStudentArr;
         size--;
     }
-        int size() {
+        public int size() {
             return size;
         }
 
