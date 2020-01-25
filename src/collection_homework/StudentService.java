@@ -77,20 +77,20 @@ public class StudentService {
     private static void printStudentsArrayList(ArrayList<Student> students){
         Iterator<Student> iterator = students.iterator();
         while (iterator.hasNext()){
-            iterator.next().studentData();
+            System.out.println(iterator.next());
         }
     }
 
     private static void printStudentsLinkedList(LinkedList<Student> students){
         Iterator<Student> iterator = students.iterator();
         while (iterator.hasNext()){
-            iterator.next().studentData();
+            System.out.println(iterator.next());
         }
     }
 
     private static void printStudentsDynamicArray(DynamicArray students){
         for (int i = 0; i < students.size(); i++) {
-            students.get(i).studentData();
+            System.out.println(students.get(i));
         }
     }
 

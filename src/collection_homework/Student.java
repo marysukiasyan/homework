@@ -12,9 +12,9 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return ("FirstName: " + getFirstName() + " LastName: " + getLastName() +
-                " Age: "+ getAge());
+                " Age: " + getAge());
     }
 
     public String getFirstName() {
@@ -27,10 +27,6 @@ public class Student implements Comparable<Student> {
 
     public int getAge() {
         return age;
-    }
-
-    public void studentData(){
-        System.out.println(firstName + " " + lastName + " " + age);
     }
 
     @Override

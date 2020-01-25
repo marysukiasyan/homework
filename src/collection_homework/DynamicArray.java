@@ -20,15 +20,16 @@ public class DynamicArray {
         size = 1;
     }
 
-    public void add(Student student){
+    public boolean add(Student student){
         if(count == size){
             growSize();
         }
         studentsArray[count] = student;
         count++;
+        return true;
     }
 
-    public void growSize(){
+    private void growSize(){
         Student tempStudentArr[] = null;
         if(count == size) {
             tempStudentArr = new Student[size + 1];
@@ -63,7 +64,7 @@ public class DynamicArray {
             return size;
         }
 
-        Student get(int index){
+        public Student get(int index){
             if (index < size) {
                 return studentsArray[index];
             }
