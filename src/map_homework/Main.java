@@ -13,9 +13,9 @@ public class Main {
         Student s3 = new Student("Diana", "Asatryan", 24, "0988111111",
                 "Math");
         Student s4 = new Student("Dia", "Asatryan", 24, "0988111111",
-                "Math");
+                "Computer Science");
         Student s5 = new Student("Dia", "Asatryan", 22, "0988111111",
-                "Math");
+                "Philosophy");
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(s3);
@@ -24,7 +24,7 @@ public class Main {
         students.add(s5);
         students.add(s1);
 
-
         StudentService.getStudentsMap(students);
+        StudentService.getStudentsFaculties(students);
     }
 }

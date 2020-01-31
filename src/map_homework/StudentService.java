@@ -3,7 +3,6 @@ package map_homework;
 import java.util.*;
 
 public class StudentService {
-    private Student[] students;
 
     public static Map<Student, Integer> getStudentsMap(ArrayList<Student> students) {
 
@@ -28,5 +27,26 @@ public class StudentService {
         }
     }
 
-}
+    public static void printFacultyMap(Map<String, Integer> map){
+        for (Map.Entry<String, Integer> mapEntry: map.entrySet()){
+            System.out.println(mapEntry.getKey() + " " + mapEntry.getValue());
+        }
+    }
 
+    public static Map<String, Integer> getStudentsFaculties(ArrayList<Student> students){
+
+        Map<String, Integer> facultyMap = new HashMap<>();
+        for (int i = 0; i < students.size(); i++) {
+            String currentFaculty = students.get(i).getFaculty();
+            if(facultyMap.containsKey(currentFaculty)){
+                facultyMap.put(currentFaculty, facultyMap.get(currentFaculty) + 1);
+            }
+            else{
+                facultyMap.put(currentFaculty, 1);
+            }
+        }
+        printFacultyMap(facultyMap);
+        return facultyMap;
+    }
+
+}

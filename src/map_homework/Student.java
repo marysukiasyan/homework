@@ -17,6 +17,10 @@ public class Student {
         return lastName;
     }
 
+    public String getFaculty() {
+        return faculty;
+    }
+
     public Student(String firstName, String lastName, int age, String phoneNumber, String faculty) {
         this.firstName = firstName;
         this.lastName = lastName;
