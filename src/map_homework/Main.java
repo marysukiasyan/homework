@@ -24,7 +24,7 @@ public class Main {
         students.add(s5);
         students.add(s1);
 
-        StudentService.getStudentsMap(students);
-        StudentService.getStudentsFaculties(students);
+        StudentService.printMap(StudentService.getStudentsMap(students));
+        StudentService.printFacultyMap(StudentService.getStudentsFaculties(students));
     }
 }

@@ -11,13 +11,10 @@ public class StudentService {
             Student currentStudent = students.get(i);
             if (studentsMapOfSameName.containsKey(currentStudent)) {
                 studentsMapOfSameName.put(currentStudent, studentsMapOfSameName.get(currentStudent) + 1);
-            }
-            else {
+            } else {
                 studentsMapOfSameName.put(currentStudent, 1);
             }
-            }
-
-        printMap(studentsMapOfSameName);
+        }
         return studentsMapOfSameName;
     }
 
@@ -45,7 +42,6 @@ public class StudentService {
                 facultyMap.put(currentFaculty, 1);
             }
         }
-        printFacultyMap(facultyMap);
         return facultyMap;
     }
 
