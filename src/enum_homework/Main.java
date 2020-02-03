@@ -9,6 +9,6 @@ public class Main {
 
         MonthService.printMonths();
 
-        MonthService.checkHoliday(MonthsOfTheYear.MARCH, new int[]{8, 21});
+        System.out.println(MonthService.checkHoliday(MonthsOfTheYear.MARCH, 8));
     }
 }

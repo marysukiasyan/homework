@@ -23,18 +23,16 @@ public class MonthService {
         }
     }
 
-    public static void checkHoliday(MonthsOfTheYear month, int[] days){
+    public static boolean checkHoliday(MonthsOfTheYear month, int checkingDay) {
         int[] holidaysOfMonth = month.getHolidays();
-        for (int i = 0; i < days.length; i++) {
-            for (int day:
-                    holidaysOfMonth) {
-                if(days[i] == day){
-                    System.out.println(days[i] + " is a holiday in " + month);
-                }
-                else{
-                    System.out.println(days[i] + " isn't a holiday in " + month);
+        boolean isHoliday = false;
+        for (int day : holidaysOfMonth) {
+                if (checkingDay == day) {
+                    isHoliday = true;
+                } else {
+                    isHoliday = false;
                 }
             }
-        }
+        return isHoliday;
     }
 }
