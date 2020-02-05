@@ -14,24 +14,12 @@ public class DoublyLinkedList {
         return tail;
     }
 
-     class Node {
+    class Node {
         Student student;
         Node next;
         Node prev;
 
-         public Student getStudent() {
-             return student;
-         }
-
-         public Node getNext() {
-             return next;
-         }
-
-         public Node getPrev() {
-             return prev;
-         }
-
-         public Node(Student student, Node next, Node prev) {
+        public Node(Student student, Node next, Node prev) {
             this.student = student;
             this.next = next;
             this.prev = prev;
