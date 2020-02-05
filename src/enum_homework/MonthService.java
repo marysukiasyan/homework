@@ -25,14 +25,11 @@ public class MonthService {
 
     public static boolean checkHoliday(MonthsOfTheYear month, int checkingDay) {
         int[] holidaysOfMonth = month.getHolidays();
-        boolean isHoliday = false;
         for (int day : holidaysOfMonth) {
                 if (checkingDay == day) {
-                    isHoliday = true;
-                } else {
-                    isHoliday = false;
+                    return true;
                 }
             }
-        return isHoliday;
+        return false;
     }
 }
