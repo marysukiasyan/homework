@@ -3,17 +3,33 @@ package set_homework;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SetImplementation<T extends Comparable<T>> {
+/**
+ * Implementation of TreeSet
+ * @param <T>
+ * @author Mary Sukiasyan
+ * @see Comparable
+ * @see ArrayList
+ * @see Collections
+ */
+public class TreeSetImplementation<T extends Comparable<T>> {
 
         private ArrayList<T> arrayList;
 
-        public SetImplementation() {
+    /**
+     * Initialization of empty TreeSet
+     */
+        public TreeSetImplementation() {
             this.arrayList = new ArrayList<T>();
         }
 
-        public void add(T elem) throws IllegalAccessException {
+    /**
+     *
+     * @param elem desired element to add to this TreeSet
+     * @throws IllegalArgumentException
+     */
+        public void add(T elem) throws IllegalArgumentException {
             if(elem == null){
-                throw new IllegalAccessException("bla");
+                throw new IllegalArgumentException("Null element");
             }
             if(!arrayList.contains(elem)) {
                 arrayList.add(elem);
@@ -38,9 +54,9 @@ public class SetImplementation<T extends Comparable<T>> {
             return false;
         }
 
-        public T get(int i) throws Exception {
-            if(i>arrayList.size()){
-                throw new Exception("bla");
+        public T get(int i) throws ArrayIndexOutOfBoundsException {
+            if(i>arrayList.size() || i<arrayList.size()){
+                throw new ArrayIndexOutOfBoundsException("Index out of bounds");
             }
             return arrayList.get(i);
         }
