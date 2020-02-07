@@ -1,7 +1,6 @@
 package set_homework;
 
 import set_homework.exception.ElementIsNull;
-import set_homework.exception.IndexIsIncorrect;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +25,7 @@ public class TreeSetImplementation<T extends Comparable<T>> {
         }
 
     /**
-     *
+     *Adds element to TreeSet
      * @param elem desired element to add to this TreeSet
      */
         public void add(T elem) {
@@ -39,10 +38,19 @@ public class TreeSetImplementation<T extends Comparable<T>> {
             Collections.sort(this.arrayList);
         }
 
-        public int getSize() {
+    /**
+     * Gets size of TreeSet
+     * @return size of TreeSet
+     */
+
+    public int getSize() {
             return arrayList.size();
         }
 
+    /**
+     * Removed element from TreeSet
+     * @param elem desired element to be removed
+     */
         public void remove(T elem){
             if(elem == null){
                 throw new ElementIsNull("Null element");
@@ -52,15 +60,24 @@ public class TreeSetImplementation<T extends Comparable<T>> {
             }
         }
 
-        public boolean contains(T elem){
+    /**
+     *
+     * @param elem element to check if TreeSet contains
+     * @return true if element is contained false otherwise
+     */
+
+    public boolean contains(T elem){
             if(arrayList.contains(elem)){
                 return true;
             }
             return false;
         }
 
-        public void print(){
+    /**
+     * prints TreeSet
+     */
 
+    public void print(){
             for (T i: arrayList) {
                 System.out.println(i);
             }
