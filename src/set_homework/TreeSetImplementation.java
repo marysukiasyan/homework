@@ -1,5 +1,8 @@
 package set_homework;
 
+import set_homework.exception.ElementIsNull;
+import set_homework.exception.IndexIsIncorrect;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -25,11 +28,10 @@ public class TreeSetImplementation<T extends Comparable<T>> {
     /**
      *
      * @param elem desired element to add to this TreeSet
-     * @throws IllegalArgumentException
      */
-        public void add(T elem) throws IllegalArgumentException {
+        public void add(T elem) {
             if(elem == null){
-                throw new IllegalArgumentException("Null element");
+                throw new ElementIsNull("Null element");
             }
             if(!arrayList.contains(elem)) {
                 arrayList.add(elem);
@@ -42,6 +44,9 @@ public class TreeSetImplementation<T extends Comparable<T>> {
         }
 
         public void remove(T elem){
+            if(elem == null){
+                throw new ElementIsNull("Null element");
+            }
             if(arrayList.contains(elem)){
                 arrayList.remove(elem);
             }
@@ -54,10 +59,10 @@ public class TreeSetImplementation<T extends Comparable<T>> {
             return false;
         }
 
-        public T get(int i) throws ArrayIndexOutOfBoundsException {
-            if(i>arrayList.size() || i<arrayList.size()){
-                throw new ArrayIndexOutOfBoundsException("Index out of bounds");
+        public void print(){
+
+            for (T i: arrayList) {
+                System.out.println(i);
             }
-            return arrayList.get(i);
         }
     }
