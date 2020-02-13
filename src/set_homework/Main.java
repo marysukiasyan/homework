@@ -16,8 +16,11 @@ public class Main {
         studentSet.add(s1);
         studentSet.add(s2);
         studentSet.add(s3);
+        studentSet.add(s3);
+
 
         studentSet.print();
+        System.out.println(studentSet.getSize());
 
 
         TreeSetImplementation<Coffee> coffeeSet = new TreeSetImplementation<>();
@@ -25,8 +28,8 @@ public class Main {
         Coffee c1 = new Coffee("Americano", 20);
         Coffee c2 = new Coffee("Espresso", 25);
 
-        coffeeSet.add(c1);
         coffeeSet.add(c2);
+        coffeeSet.add(c1);
 
         coffeeSet.print();
 
